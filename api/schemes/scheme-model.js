@@ -172,7 +172,7 @@ async function addStep(scheme_id, step) { // EXERCISE E
     and resolves to _all the steps_ belonging to the given `scheme_id`,
     including the newly created one.
   */
- const [id] = await db('steps').insert({...step, scheme_id})
+ const [id] = await db('steps').insert({...step, scheme_id}) //eslint-disable-line
  return findSteps(scheme_id)
 }
 
